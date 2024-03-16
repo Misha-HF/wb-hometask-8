@@ -33,9 +33,9 @@ def save_quotes_to_db(quotes_data):
             )
             quote.save()
 
+if __name__ == "__main__":
+    authors_data = load_from_authors_json('first_part/authors.json')
+    save_authors_to_db(authors_data)
 
-authors_data = load_from_authors_json('authors.json')
-save_authors_to_db(authors_data)
-
-quotes_data = load_from_qoutes_json('quotes.json')
-save_quotes_to_db(quotes_data)
+    quotes_data = load_from_qoutes_json('first_part/quotes.json')
+    save_quotes_to_db(quotes_data)
